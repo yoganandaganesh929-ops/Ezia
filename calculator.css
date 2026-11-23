@@ -1,0 +1,210 @@
+/* ==========================================================================
+   EZIA CALCULATOR PAGE STYLES (calculator.css)
+   Healthio-Inspired Clinical Anthropometrics Interface
+   Structured 8pt Grid + Unified Spacing Scale
+   ========================================================================== */
+
+.page-calculator {
+  background-color: var(--color-bg);
+}
+
+/* Unit Toggle Segmented Pill */
+.unit-toggle-pill {
+  display: inline-flex;
+  background: var(--color-border-light);
+  border-radius: var(--radius-full);
+  padding: 3px;
+  gap: 3px;
+  border: 1px solid var(--color-border);
+}
+
+.toggle-pill-btn {
+  padding: 6px 16px;
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-full);
+  color: var(--color-text-secondary);
+  background: transparent;
+  border: none;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.toggle-pill-btn.active {
+  background-color: var(--color-teal);
+  color: #FFFFFF;
+  box-shadow: 0 1px 3px rgba(13, 148, 136, 0.25);
+}
+
+.calculator-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+/* Results Card Box */
+.result-hero-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-md);
+  border: 1px solid var(--color-border);
+}
+
+.result-hero-metric {
+  display: flex;
+  flex-direction: column;
+}
+
+.result-summary-text {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-normal);
+  margin-top: 4px;
+}
+
+/* Gauge Visual Wrap */
+.gauge-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.gauge-visual-wrap {
+  position: relative;
+  max-width: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bmi-gauge-svg {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 4px 10px rgba(15, 23, 42, 0.08));
+}
+
+.gauge-needle-indicator {
+  text-align: center;
+  margin-top: var(--space-xs);
+}
+
+.needle-label {
+  display: inline-block;
+  background-color: var(--color-teal-darkest);
+  color: #FFFFFF;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.02em;
+}
+
+.gauge-scale-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-xs);
+  margin-top: var(--space-md);
+}
+
+.scale-item {
+  font-size: 11px;
+  font-weight: var(--font-weight-medium);
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+}
+
+.item-blue { background-color: #E0F2FE; color: #0369A1; border: 1px solid #BAE6FD; }
+.item-mint { background-color: #ECFDF5; color: #047857; border: 1px solid #A7F3D0; }
+.item-amber { background-color: #FFFBEB; color: #B45309; border: 1px solid #FDE68A; }
+.item-red { background-color: #FFF1F2; color: #BE123C; border: 1px solid #FECDD3; }
+
+/* Pediatric Warning Banner */
+.warning-banner {
+  background-color: var(--color-amber-soft);
+  border: 1px solid var(--color-amber-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  margin-top: var(--space-md);
+  display: flex;
+  gap: var(--space-sm);
+  align-items: flex-start;
+  color: var(--color-amber-dark);
+}
+
+.warning-banner strong {
+  display: block;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 2px;
+}
+
+.warning-banner p {
+  font-size: var(--font-size-xs);
+  color: var(--color-amber-dark);
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* History Data Table */
+.history-subcard {
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-xs);
+  text-align: left;
+}
+
+.data-table th {
+  background-color: var(--color-bg);
+  padding: 10px 14px;
+  font-size: var(--font-size-2xs);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.data-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--color-border-light);
+  color: var(--color-text-primary);
+  vertical-align: middle;
+}
+
+.data-table tbody tr:hover td {
+  background-color: var(--color-bg);
+}
+
+@media (max-width: 960px) {
+  .calculator-grid {
+    grid-template-columns: 1fr;
+  }
+}

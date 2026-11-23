@@ -1,0 +1,512 @@
+/* ==========================================================================
+   EZIA SUBSCRIPTION / PRICING PAGE (subscription.css)
+   ========================================================================== */
+
+/* ── Page Layout ── */
+.page-subscription {
+  background: var(--color-bg);
+}
+
+.subscription-main {
+  min-height: 100vh;
+}
+
+/* ── Pricing Hero ── */
+.pricing-hero {
+  background: linear-gradient(135deg, var(--color-teal-darkest) 0%, var(--color-teal) 50%, var(--color-verdigris) 100%);
+  padding: 80px 24px 72px;
+  text-align: center;
+}
+
+.pricing-hero-inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.pricing-hero .eyebrow {
+  display: block;
+  color: var(--color-mint-bright);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  margin-bottom: 20px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.pricing-hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.18;
+  margin-bottom: 20px;
+}
+
+.pricing-hero-title em {
+  font-style: italic;
+  color: var(--color-mint-bright);
+}
+
+.pricing-hero-subtitle {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.78);
+  line-height: 1.65;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+}
+
+/* ── Cards Section ── */
+.pricing-cards-section {
+  padding: 64px 24px 80px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.pricing-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+@media (max-width: 700px) {
+  .pricing-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Pricing Card ── */
+.pricing-card {
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: 20px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  transition: box-shadow 0.2s ease;
+}
+
+.pricing-card:hover {
+  box-shadow: 0 8px 32px rgba(13,148,136,0.10);
+}
+
+.pricing-card-pro {
+  border-color: var(--color-teal);
+  background: linear-gradient(160deg, #F0FDFA 0%, #ffffff 100%);
+  box-shadow: 0 4px 24px rgba(13,148,136,0.14);
+  position: relative;
+}
+
+/* ── Badge Row ── */
+.plan-badge-row {
+  margin-bottom: 20px;
+}
+
+.plan-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 5px 12px;
+  border-radius: 100px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.plan-badge-free {
+  background: var(--color-bg-subtle);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+}
+
+.plan-badge-pro {
+  background: var(--color-teal);
+  color: #ffffff;
+}
+
+/* ── Plan Header ── */
+.plan-header {
+  margin-bottom: 24px;
+}
+
+.plan-name {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 10px;
+}
+
+.plan-name-pro {
+  color: var(--color-teal-dark);
+}
+
+.plan-price-block {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+
+.plan-price {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  line-height: 1;
+}
+
+.plan-price-pro {
+  color: var(--color-teal);
+}
+
+.plan-price-period {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.plan-tagline {
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* ── Features List ── */
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: var(--color-text-primary);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  line-height: 1.4;
+}
+
+.feature-excluded {
+  color: var(--color-text-muted);
+}
+
+.feature-icon {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--color-mint-soft);
+  color: var(--color-mint-dark);
+  font-size: 10px;
+  font-weight: 700;
+  margin-top: 1px;
+}
+
+.feature-icon-no {
+  background: var(--color-error-soft);
+  color: var(--color-text-muted);
+}
+
+.feature-highlight span {
+  font-weight: 500;
+}
+
+/* ── CTA Area ── */
+.plan-cta-area {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.plan-guest-link {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color 0.15s;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.plan-guest-link:hover {
+  color: var(--color-teal);
+}
+
+.plan-cta-note {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  margin: 0;
+  text-align: center;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* ── AI Doctor Preview ── */
+.ai-doctor-preview {
+  margin-top: 24px;
+  padding: 16px;
+  background: rgba(13,148,136,0.06);
+  border: 1px solid var(--color-teal-border);
+  border-radius: 14px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.ai-doctor-avatar {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  background: var(--color-teal);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.ai-doctor-bubble {
+  flex: 1;
+}
+
+.ai-doctor-name {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-teal-dark);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.ai-doctor-message {
+  font-size: 0.82rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin: 0;
+  font-style: italic;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* ── Comparison Section ── */
+.comparison-section {
+  background: var(--color-bg-subtle);
+  padding: 72px 24px;
+  border-top: 1px solid var(--color-border);
+}
+
+.comparison-inner {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.comparison-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 700px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.comparison-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 28px 24px;
+  text-align: center;
+  transition: box-shadow 0.2s;
+}
+
+.comparison-card:hover {
+  box-shadow: 0 4px 20px rgba(13,148,136,0.09);
+  border-color: var(--color-teal-border);
+}
+
+.comparison-icon {
+  font-size: 2rem;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.comparison-card h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 10px;
+}
+
+.comparison-card p {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  margin: 0;
+}
+
+/* ── FAQ Section ── */
+.faq-section {
+  padding: 72px 24px 80px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.faq-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.faq-question {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  padding: 18px 20px;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question::-webkit-details-marker { display: none; }
+.faq-question::after {
+  content: '+';
+  font-size: 1.1rem;
+  color: var(--color-teal);
+  flex-shrink: 0;
+  margin-left: 12px;
+}
+
+details[open] .faq-question::after {
+  content: '−';
+}
+
+.faq-answer {
+  padding: 0 20px 18px;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  margin: 0;
+}
+
+/* ── Pro Modal ── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10,20,30,0.55);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.modal-overlay[hidden] {
+  display: none;
+}
+
+.modal-card {
+  background: var(--color-surface);
+  border-radius: 24px;
+  padding: 40px 36px;
+  max-width: 440px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.modal-close:hover {
+  background: var(--color-bg-subtle);
+  color: var(--color-text-primary);
+}
+
+.modal-icon {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+}
+
+.modal-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 10px;
+}
+
+.modal-body {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.modal-card .form-input {
+  margin-bottom: 14px;
+}
+
+.modal-disclaimer {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-top: 10px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}

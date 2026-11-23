@@ -1,0 +1,595 @@
+/* ==========================================================================
+   EZIA DASHBOARD STYLES (dashboard.css)
+   Healthio-Inspired Premium Health-Tech Executive Suite
+   Structured 8pt Grid + Unified Spacing + Clean Slate Composition
+   ========================================================================== */
+
+.page-dashboard {
+  background-color: var(--color-bg);
+}
+
+.text-white { color: #FFFFFF !important; }
+.text-teal { color: var(--color-teal) !important; }
+.text-mint { color: var(--color-mint-dark) !important; }
+.text-amber { color: var(--color-amber-dark) !important; }
+
+/* Page Header */
+.page-dashboard .page-header {
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-xs);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.page-dashboard .page-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-text-primary);
+  letter-spacing: var(--letter-spacing-tight);
+  margin-top: 2px;
+  margin-bottom: 2px;
+  line-height: 1.2;
+}
+
+.page-dashboard .page-description {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: 0;
+  max-width: 650px;
+}
+
+.header-eyebrow-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-bottom: 2px;
+}
+
+.header-action-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.sidebar-logout-wrap {
+  margin-top: var(--space-xs);
+}
+
+.sidebar-switch-link {
+  font-size: var(--font-size-2xs);
+  color: var(--color-mint-bright);
+  text-decoration: none;
+  font-weight: var(--font-weight-semibold);
+  transition: opacity var(--transition-fast);
+}
+
+.sidebar-switch-link:hover {
+  opacity: 0.85;
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   Section 1: Healthio Hero Command Card
+   ========================================================================== */
+.bento-hero-section {
+  margin-bottom: var(--space-md);
+}
+
+.bento-hero-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-teal);
+  border-radius: var(--radius-lg);
+  padding: 18px 22px;
+  box-shadow: var(--shadow-card);
+  display: grid;
+  grid-template-columns: 1fr 180px;
+  gap: 20px;
+  align-items: center;
+  position: relative;
+}
+
+.bento-tag-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+}
+
+.bento-reference-tag {
+  font-size: var(--font-size-2xs);
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-medium);
+}
+
+.bento-hero-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-text-primary);
+  letter-spacing: var(--letter-spacing-tight);
+  margin-bottom: 4px;
+}
+
+.bento-summary-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.45;
+  max-width: 620px;
+  margin-bottom: 12px;
+}
+
+/* 3-Pillar Horizontal Data Strip */
+.bento-pillars-breakdown {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.pillar-mini-tile {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.pillar-mini-tile:hover {
+  border-color: var(--color-border-dark);
+  transform: translateY(-1px);
+}
+
+.pillar-mini-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mini-tile-label {
+  font-size: var(--font-size-2xs);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--color-text-muted);
+}
+
+.pillar-weight-badge {
+  font-size: 10px;
+  font-family: var(--font-family-mono);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-teal);
+  background-color: var(--color-teal-soft);
+  padding: 1px 6px;
+  border-radius: var(--radius-full);
+}
+
+.mini-tile-val {
+  font-size: var(--font-size-lg);
+  font-family: var(--font-family-sans);
+  font-weight: var(--font-weight-extrabold);
+  margin: 3px 0 1px;
+  line-height: 1.15;
+}
+
+.mini-tile-sub {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+/* Precision Radial Health Dial */
+.bento-visual-gauge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+}
+
+.score-circle-outer {
+  position: relative;
+  width: 104px;
+  height: 104px;
+}
+
+.score-svg-meter {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.meter-bg {
+  fill: none;
+  stroke: var(--color-border);
+  stroke-width: 8;
+}
+
+.meter-fill {
+  fill: none;
+  stroke: var(--color-teal);
+  stroke-width: 8;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.score-circle-inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.score-number {
+  font-size: 26px;
+  font-family: var(--font-family-sans);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-text-primary);
+  line-height: 1;
+}
+
+.score-scale {
+  font-size: 10px;
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-semibold);
+  margin-top: 1px;
+}
+
+.score-caption {
+  font-size: 10px;
+  color: var(--color-teal);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: 4px;
+}
+
+/* ==========================================================================
+   Section 2: Key Metrics Triad (Distinctive 3-Column Grid)
+   ========================================================================== */
+.dashboard-metrics-section {
+  margin-bottom: var(--space-md);
+}
+
+.dashboard-metric-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.metric-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.metric-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--color-border-dark);
+}
+
+.metric-card-hydration { border-top: 3px solid var(--color-teal); }
+.metric-card-sleep { border-top: 3px solid var(--color-mint); }
+.metric-card-metabolism { border-top: 3px solid var(--color-amber); }
+
+.metric-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.metric-label {
+  font-size: var(--font-size-2xs);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-widest);
+  color: var(--color-text-muted);
+}
+
+.metric-title {
+  font-size: 15px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-top: 2px;
+}
+
+.metric-icon-wrap {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.metric-icon-teal { background-color: var(--color-teal-soft); color: var(--color-teal); }
+.metric-icon-mint { background-color: var(--color-mint-soft); color: var(--color-mint-dark); }
+.metric-icon-amber { background-color: var(--color-amber-soft); color: var(--color-amber-dark); }
+
+.metric-center-info {
+  margin-bottom: var(--space-xs);
+}
+
+.metric-value-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.metric-value {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-text-primary);
+  line-height: 1;
+}
+
+.metric-unit {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-muted);
+}
+
+.progress-bar-wrap {
+  width: 100%;
+  height: 6px;
+  background-color: var(--color-border);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin: var(--space-sm) 0 var(--space-xs);
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fill-teal { background-color: var(--color-teal); }
+
+.star-rating-display {
+  color: #F59E0B;
+  font-size: 1.15rem;
+  letter-spacing: 2px;
+  margin-top: 6px;
+}
+
+.metric-badge-wrap {
+  margin-top: 6px;
+}
+
+.metric-context {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  margin-top: var(--space-xs);
+}
+
+.metric-card-footer {
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--color-border-light);
+}
+
+.card-link {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-teal);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: gap var(--transition-fast);
+}
+
+.card-link:hover {
+  gap: 8px;
+  color: var(--color-teal-dark);
+}
+
+/* ==========================================================================
+   Section 3: 7-Day Trend Analytics Card
+   ========================================================================== */
+.chart-card {
+  margin-bottom: var(--space-xl);
+}
+
+.chart-legend {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: var(--font-weight-medium);
+}
+
+.legend-swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-xs);
+}
+
+.swatch-teal { background-color: var(--color-teal); }
+.swatch-mint { background-color: var(--color-mint); border-radius: var(--radius-full); }
+
+.chart-viewport {
+  width: 100%;
+  min-height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: var(--space-md);
+}
+
+.chart-bars-wrap {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  width: 100%;
+  height: 180px;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 8px;
+}
+
+.chart-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.chart-col-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 100%;
+  padding-bottom: 2px;
+}
+
+.chart-bar {
+  width: 12px;
+  border-radius: 3px 3px 0 0;
+  transition: height 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity var(--transition-fast);
+  cursor: pointer;
+}
+
+.chart-bar:hover {
+  opacity: 0.8;
+}
+
+.bar-teal { background-color: var(--color-teal); }
+.bar-mint { background-color: var(--color-mint); }
+
+.chart-col-label {
+  font-size: 11px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-muted);
+}
+
+.chart-empty-state {
+  text-align: center;
+  padding: var(--space-xl) var(--space-md);
+  color: var(--color-text-muted);
+}
+
+.chart-empty-state h4 {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin: var(--space-xs) 0 4px;
+}
+
+.chart-empty-state p {
+  font-size: var(--font-size-xs);
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   Section 4: Supportive Notes (Clinical Intelligence)
+   ========================================================================== */
+.insights-card {
+  margin-bottom: var(--space-xl);
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+}
+
+.note-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.note-card:hover {
+  border-color: var(--color-border-dark);
+  box-shadow: var(--shadow-subtle);
+}
+
+.note-tag {
+  font-size: 10px;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--color-teal);
+}
+
+.note-card h4 {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.note-card p {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-normal);
+  margin: 0;
+}
+
+.note-mint { border-left: 3px solid var(--color-mint); }
+.note-teal { border-left: 3px solid var(--color-teal); }
+.note-neutral { border-left: 3px solid var(--color-border-dark); }
+
+/* ==========================================================================
+   Responsive Adaptations (8pt Grid Preserved)
+   ========================================================================== */
+@media (max-width: 1080px) {
+  .bento-hero-card {
+    grid-template-columns: 1fr;
+  }
+  .bento-visual-gauge {
+    width: 100%;
+  }
+  .dashboard-metric-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-metric-grid {
+    grid-template-columns: 1fr;
+  }
+  .bento-pillars-breakdown {
+    grid-template-columns: 1fr;
+  }
+  .notes-grid {
+    grid-template-columns: 1fr;
+  }
+  .bento-hero-card {
+    padding: var(--space-lg);
+  }
+}

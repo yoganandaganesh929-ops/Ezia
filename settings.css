@@ -1,0 +1,56 @@
+/* ==========================================================================
+   EZIA SETTINGS PAGE STYLES (settings.css)
+   Healthio-Inspired Preferences Interface
+   Structured 8pt Grid + Unified Spacing Scale
+   ========================================================================== */
+
+.page-settings {
+  background-color: var(--color-bg);
+}
+
+.settings-sections-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-2xl);
+  max-width: var(--container-narrow-width);
+}
+
+.settings-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-card);
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.settings-action-row {
+  display: flex;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border-light);
+}
+
+.danger-zone-card {
+  border: 1px solid var(--color-error-border);
+}
+
+.danger-zone-card .card-title {
+  color: var(--color-error);
+}
+
+@media (max-width: 640px) {
+  .form-row-2 {
+    grid-template-columns: 1fr;
+  }
+  .settings-action-row {
+    flex-direction: column;
+  }
+}

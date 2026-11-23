@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ezia Hydration Sanctuary — Dynamic fluid vessel, cellular hydration tracking, and electrolyte balance.">
+  <title>Hydration Vessel | Ezia Wellness</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./shared/tokens.css">
+  <link rel="stylesheet" href="./shared/base.css">
+  <link rel="stylesheet" href="./shared/components.css">
+  <link rel="stylesheet" href="./shared/layout.css">
+  <link rel="stylesheet" href="./hydration.css">
+
+  <script type="module" src="./dist/pages/hydration.page.js"></script>
+</head>
+<body class="page-hydration">
+
+  <!-- Mobile Header with Navigation Drawer Toggle -->
+  <div class="mobile-header">
+    <a class="brand-link" href="./dashboard.html">
+      <div class="brand-mark">
+        <img src="./assets/icons/ezia-logo.svg" alt="Ezia Logo" width="30" height="30">
+      </div>
+      <span class="brand-name text-white">Ezia</span>
+    </a>
+    <button type="button" id="mobileSidebarToggle" class="sidebar-toggle-btn" aria-label="Toggle navigation drawer">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+
+  <div class="sidebar-backdrop"></div>
+
+  <div class="app-shell">
+    
+    <!-- Healthio Structured Navigation Sidebar -->
+        <!-- Ezia Shared Sidebar Navigation -->
+    <aside class="sidebar" aria-label="Main Navigation">
+      <a class="sidebar-brand" href="./dashboard.html">
+        <div class="brand-mark">
+          <img src="./assets/icons/ezia-logo.svg" alt="Ezia Logo" width="36" height="36">
+        </div>
+        <div>
+          <span class="brand-name">Ezia</span>
+          <span class="brand-tag">WELLNESS</span>
+        </div>
+      </a>
+
+      <nav class="sidebar-nav">
+        <span class="sidebar-section-title">Wellness</span>
+        <a href="./dashboard.html" data-page="dashboard">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
+          <span>Dashboard</span>
+        </a>
+        <a href="./calculator.html" data-page="calculator">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="8.01" y2="10"/><line x1="12" y1="10" x2="12.01" y2="10"/><line x1="16" y1="10" x2="16.01" y2="10"/><line x1="8" y1="14" x2="8.01" y2="14"/><line x1="12" y1="14" x2="12.01" y2="14"/><line x1="16" y1="14" x2="16.01" y2="14"/><line x1="8" y1="18" x2="16" y2="18"/></svg>
+          <span>BMI &amp; Metabolism</span>
+        </a>
+        <a href="./hydration.html" data-page="hydration" class="active" aria-current="page">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+          <span>Hydration</span>
+        </a>
+        <a href="./sleep.html" data-page="sleep">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <span>Sleep</span>
+        </a>
+
+        <span class="sidebar-section-title">Insights</span>
+        <a href="./insights.html" data-page="insights">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          <span>Insights</span>
+        </a>
+        <a href="./history.html" data-page="history">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          <span>Weekly Trends</span>
+        </a>
+
+        <span class="sidebar-section-title">Plans</span>
+        <a href="./subscription.html" data-page="subscription">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <span>Upgrade to Pro</span>
+        </a>
+
+        <span class="sidebar-section-title">Settings</span>
+        <a href="./settings.html" data-page="settings">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          <span>Settings</span>
+        </a>
+      </nav>
+
+      <!-- Sidebar User Profile Footer -->
+      <div class="sidebar-footer">
+        <div class="sidebar-user-pill">
+          <div class="sidebar-avatar" id="sidebarAvatar">EZ</div>
+          <div class="sidebar-user-info" id="sidebarUserInfo">
+            <span id="sidebarUserName" class="sidebar-user-name">Member</span>
+            <span class="sidebar-user-status" id="sidebarUserStatus">Private Session</span>
+          </div>
+        </div>
+        <div class="sidebar-logout-wrap">
+          <a href="./login.html" id="sidebarLogout" class="sidebar-switch-link">Sign Out &rarr;</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Workspace Content -->
+    <main class="main-content">
+      
+      <!-- Page Header -->
+      <header class="page-header">
+        <div>
+          <span class="eyebrow">CELLULAR HYDRATION DYNAMICS</span>
+          <h1 class="page-title">Hydration Vessel</h1>
+          <p class="page-description">
+            Track daily fluid intake and visualize cellular equilibrium in a dynamic glass vessel calibrated to your physiological targets.
+          </p>
+        </div>
+        <div class="header-action-group">
+          <span class="badge badge-teal" id="hydrationDateBadge">Today &middot; Active</span>
+        </div>
+      </header>
+
+      <!-- Main Hydration Two-Column Layout -->
+      <div class="hydration-grid">
+        
+        <!-- Left Column: Focal 3D Liquid Vessel & Controls -->
+        <section class="card hydration-main-card" aria-labelledby="intake-title">
+          <div class="card-header">
+            <div>
+              <span class="badge badge-teal">Biological Equilibrium</span>
+              <h2 id="intake-title" class="card-title" style="margin-top: 4px;">Today's Fluid Intake</h2>
+            </div>
+            <span id="hydrationStatusBadge" class="badge badge-amber">Awaiting Intake</span>
+          </div>
+
+          <!-- Central Focal Vessel -->
+          <div class="bottle-visual-container">
+            <!-- 3D Glass Flask Vessel with Dynamic Fluid Wave -->
+            <div class="glass-bottle-shape">
+              <div class="glass-measurement-lines">
+                <span>100% Target</span>
+                <span>75% Optimal</span>
+                <span>50% Midday</span>
+                <span>25% Activation</span>
+              </div>
+              <div id="liquidWaveFill" class="liquid-fill" style="height: 0%;">
+                <div class="liquid-surface-wave"></div>
+                <div class="liquid-bubbles">
+                  <span class="bubble b1"></span>
+                  <span class="bubble b2"></span>
+                  <span class="bubble b3"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Big Stat Readout -->
+            <div class="bottle-stat-readout">
+              <span class="eyebrow">RECORDED VOLUME</span>
+              <div class="metric-value-wrap">
+                <span id="totalWaterText" class="metric-value font-mono">0</span>
+                <span class="metric-unit">ml</span>
+              </div>
+              <p id="waterGoalSummary" class="text-secondary" style="font-size: var(--font-size-sm); margin-top: 4px;">
+                0% of your 2,500 ml target
+              </p>
+              <div class="water-remaining-pill">
+                Remaining Today: <strong id="waterRemainingText">2,500 ml</strong>
+              </div>
+
+              <!-- Hydration Phase Indicators -->
+              <div class="hydration-milestones">
+                <div class="milestone-step">
+                  <span class="step-dot"></span>
+                  <span>Morning Activation (500 ml)</span>
+                </div>
+                <div class="milestone-step">
+                  <span class="step-dot"></span>
+                  <span>Midday Cellular Balance (1,500 ml)</span>
+                </div>
+                <div class="milestone-step">
+                  <span class="step-dot"></span>
+                  <span>Evening Baseline Target (2,500 ml)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Log Controls -->
+          <div class="quick-add-section">
+            <span class="eyebrow">ONE-TOUCH DOSAGE PRESETS</span>
+            <div class="quick-add-buttons">
+              <button type="button" class="btn btn-secondary quick-btn" data-ml="250" title="Add 250ml water">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+                <div class="quick-btn-info">
+                  <span class="quick-btn-amount">+250 ml</span>
+                  <span class="quick-btn-type">Standard Glass</span>
+                </div>
+              </button>
+              <button type="button" class="btn btn-secondary quick-btn" data-ml="500" title="Add 500ml water">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="2"><path d="M6 2h12v4H6zm2 4v14a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V6"/></svg>
+                <div class="quick-btn-info">
+                  <span class="quick-btn-amount">+500 ml</span>
+                  <span class="quick-btn-type">Sport Bottle</span>
+                </div>
+              </button>
+              <button type="button" class="btn btn-secondary quick-btn" data-ml="750" title="Add 750ml water">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="12" y1="6" x2="12" y2="10"/></svg>
+                <div class="quick-btn-info">
+                  <span class="quick-btn-amount">+750 ml</span>
+                  <span class="quick-btn-type">Insulated Flask</span>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Custom Volume Input Form -->
+          <form id="customWaterForm" class="custom-water-form">
+            <div class="form-group" style="margin-bottom: 0; flex: 1;">
+              <label for="customAmountInput" class="sr-only">Custom Amount in ml</label>
+              <input type="number" id="customAmountInput" class="form-input" placeholder="Enter custom amount (e.g. 350 ml)" min="20" max="3000" required>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              <span>Log Fluid</span>
+            </button>
+          </form>
+        </section>
+
+        <!-- Right Column: Intake Timeline & Health-Tech Guidance -->
+        <div class="hydration-side-col">
+          
+          <section class="card hydration-log-card" aria-labelledby="log-list-title">
+            <div class="card-header">
+              <div>
+                <span class="badge badge-teal">Intake Ledger</span>
+                <h2 id="log-list-title" class="card-title" style="margin-top: 4px;">Today's Timeline</h2>
+                <p class="card-description">Chronological record of recorded fluids</p>
+              </div>
+              <button type="button" id="undoLastWaterBtn" class="btn btn-secondary btn-sm" title="Undo the most recent entry">
+                Undo Last
+              </button>
+            </div>
+
+            <div id="hydrationLogsList" class="log-items-container">
+              <!-- Dynamically populated entries -->
+            </div>
+          </section>
+
+          <!-- Clinical Hydration Guidance Card -->
+          <section class="card clinical-pearl-card">
+            <div class="pearl-header">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="16" x2="12" y2="12"/>
+                <line x1="12" y1="8" x2="12.01" y2="8"/>
+              </svg>
+              <span class="pearl-tag">CLINICAL HYDRATION GUIDELINE</span>
+            </div>
+            <h4>Consistent Osmotic Distribution</h4>
+            <p>
+              Consuming fluid evenly across waking hours supports renal osmolarity and cellular hydration. Bolus consumption (chugging large volumes) triggers rapid diuretic filtration rather than tissue absorption.
+            </p>
+          </section>
+
+        </div>
+
+      </div>
+
+      <!-- Cellular Hydration Architecture Notice -->
+      <div class="disclaimer-banner">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+        </svg>
+        <p>
+          <strong>Hydration Physiology Standards:</strong> Baseline fluid requirements adapt dynamically according to ambient climate, physical activity, and metabolic rate. Personal targets can be calibrated in your Settings.
+        </p>
+      </div>
+
+    </main>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ezia Sleep Sanctuary — Circadian rhythm tracking, midnight crossing math, and restorative sleep hygiene.">
+  <title>Sleep Sanctuary | Ezia Wellness</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./shared/tokens.css">
+  <link rel="stylesheet" href="./shared/base.css">
+  <link rel="stylesheet" href="./shared/components.css">
+  <link rel="stylesheet" href="./shared/layout.css">
+  <link rel="stylesheet" href="./sleep.css">
+
+  <script type="module" src="./dist/pages/sleep.page.js"></script>
+</head>
+<body class="page-sleep">
+
+  <!-- Mobile Header with Navigation Drawer Toggle -->
+  <div class="mobile-header">
+    <a class="brand-link" href="./dashboard.html">
+      <div class="brand-mark">
+        <img src="./assets/icons/ezia-logo.svg" alt="Ezia Logo" width="30" height="30">
+      </div>
+      <span class="brand-name text-white">Ezia</span>
+    </a>
+    <button type="button" id="mobileSidebarToggle" class="sidebar-toggle-btn" aria-label="Toggle navigation drawer">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+
+  <div class="sidebar-backdrop"></div>
+
+  <div class="app-shell">
+    
+    <!-- Healthio Structured Navigation Sidebar -->
+        <!-- Ezia Shared Sidebar Navigation -->
+    <aside class="sidebar" aria-label="Main Navigation">
+      <a class="sidebar-brand" href="./dashboard.html">
+        <div class="brand-mark">
+          <img src="./assets/icons/ezia-logo.svg" alt="Ezia Logo" width="36" height="36">
+        </div>
+        <div>
+          <span class="brand-name">Ezia</span>
+          <span class="brand-tag">WELLNESS</span>
+        </div>
+      </a>
+
+      <nav class="sidebar-nav">
+        <span class="sidebar-section-title">Wellness</span>
+        <a href="./dashboard.html" data-page="dashboard">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
+          <span>Dashboard</span>
+        </a>
+        <a href="./calculator.html" data-page="calculator">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="8.01" y2="10"/><line x1="12" y1="10" x2="12.01" y2="10"/><line x1="16" y1="10" x2="16.01" y2="10"/><line x1="8" y1="14" x2="8.01" y2="14"/><line x1="12" y1="14" x2="12.01" y2="14"/><line x1="16" y1="14" x2="16.01" y2="14"/><line x1="8" y1="18" x2="16" y2="18"/></svg>
+          <span>BMI &amp; Metabolism</span>
+        </a>
+        <a href="./hydration.html" data-page="hydration">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+          <span>Hydration</span>
+        </a>
+        <a href="./sleep.html" data-page="sleep" class="active" aria-current="page">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <span>Sleep</span>
+        </a>
+
+        <span class="sidebar-section-title">Insights</span>
+        <a href="./insights.html" data-page="insights">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          <span>Insights</span>
+        </a>
+        <a href="./history.html" data-page="history">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          <span>Weekly Trends</span>
+        </a>
+
+        <span class="sidebar-section-title">Plans</span>
+        <a href="./subscription.html" data-page="subscription">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <span>Upgrade to Pro</span>
+        </a>
+
+        <span class="sidebar-section-title">Settings</span>
+        <a href="./settings.html" data-page="settings">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          <span>Settings</span>
+        </a>
+      </nav>
+
+      <!-- Sidebar User Profile Footer -->
+      <div class="sidebar-footer">
+        <div class="sidebar-user-pill">
+          <div class="sidebar-avatar" id="sidebarAvatar">EZ</div>
+          <div class="sidebar-user-info" id="sidebarUserInfo">
+            <span id="sidebarUserName" class="sidebar-user-name">Member</span>
+            <span class="sidebar-user-status" id="sidebarUserStatus">Private Session</span>
+          </div>
+        </div>
+        <div class="sidebar-logout-wrap">
+          <a href="./login.html" id="sidebarLogout" class="sidebar-switch-link">Sign Out &rarr;</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Workspace Content -->
+    <main class="main-content">
+      
+      <!-- Page Header -->
+      <header class="page-header">
+        <div>
+          <span class="eyebrow">CIRCADIAN RESTORATION</span>
+          <h1 class="page-title">Sleep Sanctuary</h1>
+          <p class="page-description">
+            Record bedtime, wake time, and subjective morning restfulness. Computes biological duration across midnight intervals with zero surveillance.
+          </p>
+        </div>
+        <div class="header-action-group">
+          <span class="badge badge-navy" id="sleepDateBadge">Tonight &middot; Active</span>
+        </div>
+      </header>
+
+      <!-- Sleep Grid Layout -->
+      <div class="sleep-grid">
+        
+        <!-- Left: Sleep Entry Form -->
+        <section class="card sleep-form-card" aria-labelledby="sleep-entry-title">
+          <div class="card-header">
+            <div>
+              <span class="badge badge-mint">Circadian Logging</span>
+              <h2 id="sleep-entry-title" class="card-title" style="margin-top: 4px;">Record Sleep Period</h2>
+            </div>
+            <span class="badge badge-teal" id="calculatedDurationBadge">8.0 hrs</span>
+          </div>
+
+          <form id="sleepForm" novalidate>
+            
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="bedtimeInput" class="form-label">Bedtime (Lights Out)</label>
+                <input type="time" id="bedtimeInput" class="form-input" value="23:00" required>
+                <span class="form-help">Time you began sleep wind-down.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="wakeTimeInput" class="form-label">Wake Time (Morning)</label>
+                <input type="time" id="wakeTimeInput" class="form-input" value="07:00" required>
+                <span class="form-help">Time you rose for the day.</span>
+              </div>
+            </div>
+
+            <!-- Subjective Restfulness Rating (1 to 5 Stars) -->
+            <div class="form-group">
+              <label class="form-label">Subjective Restfulness Score</label>
+              <div class="rating-stars-picker" id="starRatingPicker">
+                <button type="button" class="star-btn active" data-rating="1" aria-label="1 star - Restless">★</button>
+                <button type="button" class="star-btn active" data-rating="2" aria-label="2 stars - Fair">★</button>
+                <button type="button" class="star-btn active" data-rating="3" aria-label="3 stars - Moderate">★</button>
+                <button type="button" class="star-btn active" data-rating="4" aria-label="4 stars - Restful">★</button>
+                <button type="button" class="star-btn" data-rating="5" aria-label="5 stars - Rejuvenated">★</button>
+              </div>
+              <p id="ratingDescriptor" class="rating-descriptor">Rating: <strong>4 / 5 &mdash; Restful</strong></p>
+            </div>
+
+            <!-- Optional Sleep Quality Context -->
+            <div class="form-group">
+              <label for="sleepNotesInput" class="form-label">Bedtime Observations &amp; Wind-Down Routine</label>
+              <input type="text" id="sleepNotesInput" class="form-input" placeholder="e.g. Screen-free 30m, Chamomile tea, 19°C cool room">
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full btn-lg">
+              <span>Save Sleep Record &rarr;</span>
+            </button>
+          </form>
+        </section>
+
+        <!-- Right: Atmospheric Nocturnal Health Card -->
+        <section class="card night-sanctuary-card" aria-labelledby="sleep-summary-title">
+          <div class="card-header night-header">
+            <div>
+              <span class="badge badge-mint">Sanctuary Overview</span>
+              <h2 id="sleep-summary-title" class="card-title text-inverted" style="margin-top: 4px;">Circadian Rhythm</h2>
+            </div>
+            <span class="night-glow-indicator"></span>
+          </div>
+
+          <div class="sleep-visual-hero">
+            <div class="sleep-ill-wrap">
+              <img src="./assets/illustrations/sleep-night.svg" alt="3D Luminous Crescent Moon" class="sleep-ill-img">
+            </div>
+            <div class="sleep-stat-wrap">
+              <span class="eyebrow" style="color: var(--color-mint-bright);">LAST RECORDED REST</span>
+              <div class="metric-value-wrap">
+                <span id="heroSleepDuration" class="metric-value font-mono text-inverted">—</span>
+                <span class="metric-unit" style="color: rgba(255, 255, 255, 0.7);">hrs</span>
+              </div>
+              <p id="heroSleepSchedule" class="night-schedule-text">
+                No sleep records logged yet.
+              </p>
+              <div class="target-compliance-pill">
+                Standard Adult Target: <strong>7 &ndash; 9 hrs</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sleep Hygiene Context Box -->
+          <div class="sleep-hygiene-box">
+            <strong class="hygiene-title">Evidence-Based Sleep Hygiene:</strong>
+            <ul class="hygiene-checklist">
+              <li>Maintain bedroom temperature between 18&deg;C &ndash; 20&deg;C (65&ndash;68&deg;F)</li>
+              <li>Filter or cease high-intensity blue screens 30 minutes before bed</li>
+              <li>Keep consistent sleep and wake hours across weekdays and weekends</li>
+            </ul>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Sleep History Log Table -->
+      <section class="card history-subcard" aria-labelledby="sleep-logs-title">
+        <div class="card-header">
+          <div>
+            <span class="eyebrow">LONGITUDINAL REST</span>
+            <h2 id="sleep-logs-title" class="card-title" style="margin-top: 4px;">Recent Sleep History</h2>
+            <p class="card-description">Persistent records of bedtime, wake times, and subjective restfulness</p>
+          </div>
+          <span class="badge badge-neutral">Private &amp; Secure</span>
+        </div>
+
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Bedtime</th>
+                <th>Wake Time</th>
+                <th>Duration</th>
+                <th>Subjective Quality</th>
+                <th>Observations</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="sleepHistoryTableBody">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Circadian Architecture Standards -->
+      <div class="disclaimer-banner">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <p>
+          <strong>Circadian Intelligence Standards:</strong> Sleep duration math accounts automatically for overnight midnight transitions. Calculations run 100% locally with zero audio, biometric surveillance, or external telemetry.
+        </p>
+      </div>
+
+    </main>
+  </div>
+
+</body>
+</html>

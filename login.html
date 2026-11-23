@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sign in to your private Ezia medical-wellness sanctuary.">
+  <title>Sign In | Ezia Wellness</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./shared/tokens.css">
+  <link rel="stylesheet" href="./shared/base.css">
+  <link rel="stylesheet" href="./shared/components.css">
+  <link rel="stylesheet" href="./shared/layout.css">
+  <link rel="stylesheet" href="./login.css">
+
+  <script type="module" src="./dist/pages/auth.page.js"></script>
+</head>
+<body class="page-auth">
+
+  <!-- Public Header -->
+  <header class="public-header">
+    <div class="public-header-inner">
+      <a class="brand-link" href="./index.html">
+        <div class="brand-mark">
+          <img src="./assets/icons/ezia-logo.svg" alt="Ezia Logo" width="36" height="36">
+        </div>
+        <span class="brand-name">Ezia</span>
+      </a>
+
+      <nav class="public-nav">
+        <a href="./index.html">Home</a>
+        <a href="./register.html" class="btn btn-secondary btn-sm">Create Free Account</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Luxury Split Screen Authentication Layout -->
+  <main class="auth-main">
+    <div class="auth-split-container">
+      
+      <!-- Left Side: Editorial Brand & Values Showcase -->
+      <div class="auth-editorial-panel">
+        <div class="editorial-panel-inner">
+          <div class="panel-brand-emblem">
+            <img src="./assets/icons/ezia-logo.svg" alt="Ezia 3D Symbol" width="56" height="56">
+          </div>
+          <span class="eyebrow" style="color: var(--color-mint);">WELCOME BACK TO BALANCE</span>
+          <h2 class="editorial-heading text-inverted">Consistency is the highest form of self-respect.</h2>
+          <p class="panel-quote-body">
+            &ldquo;When hydration, restorative sleep, and metabolic metrics are tracked with calm clarity, good health ceases to be an anxious pursuit and becomes your natural daily rhythm.&rdquo;
+          </p>
+
+          <div class="panel-stats-pill">
+            <div class="pill-stat">
+              <span class="stat-highlight">SHA-256</span>
+              <span class="stat-sub">Salted Hashing</span>
+            </div>
+            <div class="pill-divider"></div>
+            <div class="pill-stat">
+              <span class="stat-highlight">100%</span>
+              <span class="stat-sub">Isolated Data</span>
+            </div>
+            <div class="pill-divider"></div>
+            <div class="pill-stat">
+              <span class="stat-highlight">Zero</span>
+              <span class="stat-sub">Ad Trackers</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side: Refined Authentication Form -->
+      <div class="auth-form-panel">
+        <div class="form-wrapper">
+          <div class="form-header-area">
+            <span class="badge badge-teal">Secure Member Sign In</span>
+            <h1 class="form-main-title">Sign in to your sanctuary</h1>
+            <p class="form-subtitle">Enter your registered credentials to access your personal dashboard.</p>
+          </div>
+
+          <div id="statusMessage" class="status-message" role="alert" aria-live="polite"></div>
+
+          <form id="loginForm" novalidate>
+            <div class="form-group">
+              <label for="email" class="form-label">Email Address</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                class="form-input" 
+                required 
+                placeholder="name@example.com" 
+                autocomplete="email"
+              >
+              <span class="form-error" id="emailError"></span>
+            </div>
+
+            <div class="form-group">
+              <div class="form-label-row">
+                <label for="password" class="form-label">Password</label>
+                <a href="#" class="form-help-link" id="forgotPasswordLink">Forgot password?</a>
+              </div>
+              <div class="password-field-wrapper">
+                <input 
+                  type="password" 
+                  id="password" 
+                  name="password" 
+                  class="form-input" 
+                  required 
+                  placeholder="Enter your password" 
+                  autocomplete="current-password"
+                >
+                <button 
+                  type="button" 
+                  id="togglePassword" 
+                  class="btn-toggle-eye" 
+                  aria-label="Toggle password visibility"
+                >
+                  <span class="eye-symbol" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                  </span>
+                </button>
+              </div>
+              <span class="form-error" id="passwordError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="rememberMe" class="form-checkbox-label">
+                <input type="checkbox" id="rememberMe" class="form-checkbox" checked>
+                <span>Remember me on this browser session</span>
+              </label>
+            </div>
+
+            <button type="submit" id="submitBtn" class="btn btn-primary btn-full btn-lg">
+              <span class="btn-text">Sign In &rarr;</span>
+            </button>
+          </form>
+
+          <!-- Instant Guest Access (No Credentials / No Sign-up Required) -->
+          <div class="guest-login-divider">
+            <span class="guest-divider-line"></span>
+            <span class="guest-divider-text">or instant access</span>
+            <span class="guest-divider-line"></span>
+          </div>
+
+          <button type="button" id="guestLoginBtn" class="btn btn-secondary btn-full btn-lg btn-guest-mode">
+            <span>✦ Continue in Guest Mode &rarr;</span>
+          </button>
+          <p class="form-help text-center guest-help-text">No password or sign up required. Explore the full suite with private local storage.</p>
+
+          <!-- Architectural Privacy Disclosure -->
+          <div class="architecture-note">
+            <strong>Architecture &amp; Storage Notice:</strong>
+            <p>Ezia operates locally on your device with complete privacy. Accounts and habit logs are stored securely in your browser with Web Crypto SHA-256 password hashing. Multi-device synchronization requires configuring a production backend server.</p>
+          </div>
+
+          <div class="form-switch-prompt">
+            <span>New to Ezia?</span>
+            <a href="./register.html" class="switch-link">Create your free profile &rarr;</a>
+          </div>
+
+          <!-- Security & Privacy Guarantee -->
+          <div class="auth-disclaimer">
+            <p><strong>Privacy &amp; Security:</strong> All health metrics and biometric credentials remain 100% encrypted in your private browser storage.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="public-footer">
+    <div class="public-footer-inner">
+      <p>&copy; 2026 Ezia Personal Wellness Platform. Client-side private storage.</p>
+      <div class="footer-links">
+        <a href="./index.html">Home</a>
+        <a href="./register.html">Register</a>
+        <a href="./calculator.html">Metrics</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

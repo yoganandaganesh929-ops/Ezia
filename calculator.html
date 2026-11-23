@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ezia Clinical Anthropometric Intelligence — Mifflin-St Jeor BMR, clinical BMI reference, and pediatric safeguards.">
+  <title>Body Metrics &amp; BMR | Ezia Wellness</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./shared/tokens.css">
+  <link rel="stylesheet" href="./shared/base.css">
+  <link rel="stylesheet" href="./shared/components.css">
+  <link rel="stylesheet" href="./shared/layout.css">
+  <link rel="stylesheet" href="./calculator.css">
+
+  <script type="module" src="./dist/pages/calculator.page.js"></script>
+</head>
+<body class="page-calculator">
+
+  <!-- Mobile Header with Sidebar Drawer Toggle -->
+  <div class="mobile-header">
+    <a class="brand-link" href="./dashboard.html">
+      <div class="brand-mark">
+        <img src="./assets/icons/ezia-logo.svg" alt="Ezia Logo" width="30" height="30">
+      </div>
+      <span class="brand-name text-white">Ezia</span>
+    </a>
+    <button type="button" id="mobileSidebarToggle" class="sidebar-toggle-btn" aria-label="Toggle navigation drawer">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+
+  <div class="sidebar-backdrop"></div>
+
+  <div class="app-shell">
+    
+    <!-- Health-Tech Editorial Sidebar -->
+        <!-- Ezia Shared Sidebar Navigation -->
+    <aside class="sidebar" aria-label="Main Navigation">
+      <a class="sidebar-brand" href="./dashboard.html">
+        <div class="brand-mark">
+          <img src="./assets/icons/ezia-logo.svg" alt="Ezia Logo" width="36" height="36">
+        </div>
+        <div>
+          <span class="brand-name">Ezia</span>
+          <span class="brand-tag">WELLNESS</span>
+        </div>
+      </a>
+
+      <nav class="sidebar-nav">
+        <span class="sidebar-section-title">Wellness</span>
+        <a href="./dashboard.html" data-page="dashboard">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
+          <span>Dashboard</span>
+        </a>
+        <a href="./calculator.html" data-page="calculator" class="active" aria-current="page">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="8.01" y2="10"/><line x1="12" y1="10" x2="12.01" y2="10"/><line x1="16" y1="10" x2="16.01" y2="10"/><line x1="8" y1="14" x2="8.01" y2="14"/><line x1="12" y1="14" x2="12.01" y2="14"/><line x1="16" y1="14" x2="16.01" y2="14"/><line x1="8" y1="18" x2="16" y2="18"/></svg>
+          <span>BMI &amp; Metabolism</span>
+        </a>
+        <a href="./hydration.html" data-page="hydration">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+          <span>Hydration</span>
+        </a>
+        <a href="./sleep.html" data-page="sleep">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <span>Sleep</span>
+        </a>
+
+        <span class="sidebar-section-title">Insights</span>
+        <a href="./insights.html" data-page="insights">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          <span>Insights</span>
+        </a>
+        <a href="./history.html" data-page="history">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          <span>Weekly Trends</span>
+        </a>
+
+        <span class="sidebar-section-title">Plans</span>
+        <a href="./subscription.html" data-page="subscription">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <span>Upgrade to Pro</span>
+        </a>
+
+        <span class="sidebar-section-title">Settings</span>
+        <a href="./settings.html" data-page="settings">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          <span>Settings</span>
+        </a>
+      </nav>
+
+      <!-- Sidebar User Profile Footer -->
+      <div class="sidebar-footer">
+        <div class="sidebar-user-pill">
+          <div class="sidebar-avatar" id="sidebarAvatar">EZ</div>
+          <div class="sidebar-user-info" id="sidebarUserInfo">
+            <span id="sidebarUserName" class="sidebar-user-name">Member</span>
+            <span class="sidebar-user-status" id="sidebarUserStatus">Private Session</span>
+          </div>
+        </div>
+        <div class="sidebar-logout-wrap">
+          <a href="./login.html" id="sidebarLogout" class="sidebar-switch-link">Sign Out &rarr;</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Workspace -->
+    <main class="main-content">
+      
+      <!-- Page Header -->
+      <header class="page-header">
+        <div>
+          <span class="eyebrow">CLINICAL ANTHROPOMETRIC INTELLIGENCE</span>
+          <h1 class="editorial-heading">Body Metrics &amp; <em>BMR</em> Reference</h1>
+          <p class="page-description">
+            Calculate your Body Mass Index (BMI) and estimated adult Basal Metabolic Rate (BMR) with the Mifflin-St Jeor formula and strict pediatric safeguards.
+          </p>
+        </div>
+        
+        <!-- Segmented Unit Toggle -->
+        <div class="unit-toggle-pill">
+          <button type="button" id="unitMetricBtn" class="toggle-pill-btn active">Metric (kg, cm)</button>
+          <button type="button" id="unitImperialBtn" class="toggle-pill-btn">Imperial (lbs, ft/in)</button>
+        </div>
+      </header>
+
+      <div class="calculator-grid">
+        
+        <!-- Column 1: Input Form -->
+        <section class="card form-card card-interactive" aria-labelledby="calc-form-title">
+          <div class="card-header">
+            <div>
+              <span class="badge badge-teal">Calibrated Inputs</span>
+              <h2 id="calc-form-title" class="card-title font-serif" style="margin-top: 4px;">Enter Anthropometrics</h2>
+            </div>
+            <span class="text-muted" style="font-size: var(--font-size-xs);">Private Client-Side</span>
+          </div>
+
+          <form id="calcForm" novalidate>
+            
+            <!-- Metric Inputs (kg / cm) -->
+            <div id="metricInputFields">
+              <div class="form-group">
+                <label for="heightCmInput" class="form-label">Stature / Height (cm)</label>
+                <input type="number" id="heightCmInput" class="form-input" min="50" max="250" placeholder="e.g. 170" required>
+                <span class="form-help">Standard upright barefoot stature.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="weightKgInput" class="form-label">Body Mass / Weight (kg)</label>
+                <input type="number" id="weightKgInput" class="form-input" min="20" max="300" step="0.1" placeholder="e.g. 65" required>
+                <span class="form-help">Measured in morning before meal intake.</span>
+              </div>
+            </div>
+
+            <!-- Imperial Inputs (ft/in & lbs) -->
+            <div id="imperialInputFields" style="display: none;">
+              <div class="form-group">
+                <span class="form-label">Stature / Height</span>
+                <div class="form-row-2">
+                  <div>
+                    <input type="number" id="heightFtInput" class="form-input" min="2" max="8" placeholder="5" aria-label="Height in feet">
+                    <label for="heightFtInput" class="form-help">Feet</label>
+                  </div>
+                  <div>
+                    <input type="number" id="heightInInput" class="form-input" min="0" max="11" placeholder="7" aria-label="Height in inches">
+                    <label for="heightInInput" class="form-help">Inches</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="weightLbsInput" class="form-label">Body Mass / Weight (lbs)</label>
+                <input type="number" id="weightLbsInput" class="form-input" min="40" max="660" step="0.1" placeholder="e.g. 143">
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="ageInput" class="form-label">Chronological Age (Years)</label>
+                <input type="number" id="ageInput" class="form-input" min="10" max="115" placeholder="e.g. 28" required>
+                <span class="form-help">BMR valid only for age 18+.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="genderSelect" class="form-label">Biological Constant</label>
+                <select id="genderSelect" class="form-select">
+                  <option value="female" selected>Female (+4.92H - 161)</option>
+                  <option value="male">Male (+4.92H + 5)</option>
+                </select>
+                <span class="form-help">Mifflin-St Jeor equation factor.</span>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full btn-lg">
+              <span>Calculate &amp; Save Metrics &rarr;</span>
+            </button>
+          </form>
+        </section>
+
+        <!-- Column 2: Results & 3D Gauge Visualization -->
+        <section class="card results-card card-interactive" aria-labelledby="calc-results-title">
+          <div class="card-header">
+            <div>
+              <span class="badge badge-mint">Physiological Output</span>
+              <h2 id="calc-results-title" class="card-title font-serif" style="margin-top: 4px;">Results &amp; Interpretation</h2>
+            </div>
+            <span id="resultCategoryBadge" class="badge badge-neutral">Awaiting Input</span>
+          </div>
+
+          <!-- Dual Hero Result Cards -->
+          <div class="result-hero-box">
+            <div class="result-hero-metric">
+              <span class="eyebrow">BODY MASS INDEX</span>
+              <div class="metric-value-wrap">
+                <span id="resultBmiNum" class="metric-value font-mono">—</span>
+                <span class="metric-unit">kg/m²</span>
+              </div>
+              <p id="resultCategoryText" class="result-summary-text">
+                Enter your measurements to calculate clinical BMI.
+              </p>
+            </div>
+
+            <div class="result-hero-metric">
+              <span class="eyebrow">ESTIMATED ADULT BMR</span>
+              <div class="metric-value-wrap">
+                <span id="resultBmrNum" class="metric-value font-mono">—</span>
+                <span class="metric-unit">kcal / day</span>
+              </div>
+              <p class="result-summary-text">
+                Resting energy expenditure (Mifflin–St Jeor estimate).
+              </p>
+            </div>
+          </div>
+
+          <!-- 3D Clinical Arc Dial Visualization -->
+          <div class="gauge-container">
+            <div class="gauge-visual-wrap">
+              <img src="./assets/illustrations/bmi-gauge.svg" alt="3D BMI Clinical Reference Arc Gauge" class="bmi-gauge-svg">
+              <div id="dynamicGaugeMarker" class="gauge-needle-indicator">
+                <span class="needle-label" id="needleLabel">Enter measurements</span>
+              </div>
+            </div>
+            <div class="gauge-scale-legend">
+              <span class="scale-item item-blue">&lt; 18.5 Underweight</span>
+              <span class="scale-item item-mint">18.5 – 24.9 Standard</span>
+              <span class="scale-item item-amber">25.0 – 29.9 Elevated</span>
+              <span class="scale-item item-red">30.0+ High</span>
+            </div>
+          </div>
+
+          <!-- Pediatric / Adolescent Safeguard Banner -->
+          <div id="pediatricWarningBanner" class="warning-banner" style="display: none;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+              <line x1="12" y1="9" x2="12" y2="13"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            <div>
+              <strong>Pediatric Reference Safeguard:</strong>
+              <p id="pediatricNoticeText">For individuals under 18 years old, adult BMI cutoff categories do not apply. Accurate pediatric growth interpretation requires percentile-for-age charts with a pediatrician.</p>
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+
+      <!-- Recent Metric Entries History Table -->
+      <section class="card history-subcard card-interactive" aria-labelledby="history-table-title">
+        <div class="card-header">
+          <div>
+            <span class="badge badge-teal">Longitudinal Record</span>
+            <h2 id="history-table-title" class="card-title font-serif" style="margin-top: 4px;">Saved Anthropometric History</h2>
+            <p class="card-description">Persistent client-side log of your biometric updates</p>
+          </div>
+          <span class="badge badge-neutral">Private &amp; Secure</span>
+        </div>
+
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Weight</th>
+                <th>Height</th>
+                <th>BMI</th>
+                <th>Estimated BMR</th>
+                <th>Reference Range</th>
+              </tr>
+            </thead>
+            <tbody id="metricsHistoryTableBody">
+              <!-- Dynamically rendered -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Clinical Measurement Standards -->
+      <div class="disclaimer-banner">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="16" x2="12" y2="12"/>
+          <line x1="12" y1="8" x2="12.01" y2="8"/>
+        </svg>
+        <p>
+          <strong>Clinical Metric Standards:</strong> Body Mass Index (BMI) evaluates stature-to-mass distribution, and Basal Metabolic Rate computes baseline 24-hour cellular caloric consumption based on the validated Mifflin-St Jeor formula with strict pediatric exemptions.
+        </p>
+      </div>
+
+    </main>
+  </div>
+
+</body>
+</html>

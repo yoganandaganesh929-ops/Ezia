@@ -1,0 +1,92 @@
+/* ==========================================================================
+   EZIA HISTORY PAGE STYLES (history.css)
+   Healthio-Inspired Longitudinal Trends Interface
+   Structured 8pt Grid + Unified Spacing Scale
+   ========================================================================== */
+
+.page-history {
+  background-color: var(--color-bg);
+}
+
+.history-charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.chart-box {
+  width: 100%;
+  min-height: 220px;
+  padding-top: var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chart-svg {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  overflow: visible;
+}
+
+.table-card {
+  margin-bottom: var(--space-xl);
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: var(--font-size-sm);
+}
+
+.data-table th {
+  background-color: var(--color-bg);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.data-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--color-border-light);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-xs);
+}
+
+.data-table tr:hover td {
+  background-color: var(--color-bg);
+}
+
+.chart-axis-line {
+  stroke: var(--color-border);
+  stroke-width: 1.5;
+}
+
+.chart-grid-line {
+  stroke: var(--color-border-light);
+  stroke-dasharray: 4 4;
+}
+
+.chart-axis-text {
+  fill: var(--color-text-muted);
+  font-size: 11px;
+  font-family: var(--font-family-sans);
+}
+
+@media (max-width: 960px) {
+  .history-charts-grid {
+    grid-template-columns: 1fr;
+  }
+}

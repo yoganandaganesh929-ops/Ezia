@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ezia plans — Free wellness tracking and Ezia Pro with your personal AI health companion.">
+  <title>Plans & Pricing | Ezia Wellness</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./shared/tokens.css">
+  <link rel="stylesheet" href="./shared/base.css">
+  <link rel="stylesheet" href="./shared/components.css">
+  <link rel="stylesheet" href="./shared/layout.css">
+  <link rel="stylesheet" href="./subscription.css">
+
+  <script src="./shared/shared.js" defer></script>
+  <script src="./subscription.js" defer></script>
+</head>
+<body class="page-subscription">
+
+  <!-- Public Header -->
+  <header class="public-header">
+    <div class="public-header-inner">
+      <a class="brand-link" href="./index.html">
+        <div class="brand-mark">
+          <img src="./assets/icons/ezia-logo.svg" alt="Ezia Logo" width="36" height="36">
+        </div>
+        <span class="brand-name">Ezia</span>
+        <span class="brand-tag">Wellness</span>
+      </a>
+      <nav class="public-nav">
+        <a href="./index.html">Home</a>
+        <a href="./login.html">Sign In</a>
+        <a href="./register.html" class="btn btn-primary btn-sm">Get Started Free</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="subscription-main">
+
+    <!-- Hero -->
+    <section class="pricing-hero">
+      <div class="pricing-hero-inner">
+        <span class="eyebrow">PLANS &amp; PRICING</span>
+        <h1 class="pricing-hero-title">Your wellness journey,<br><em>your pace.</em></h1>
+        <p class="pricing-hero-subtitle">Start free and upgrade anytime to unlock your personal AI health companion — a diet planner and daily motivator built just for you.</p>
+      </div>
+    </section>
+
+    <!-- Plans Grid -->
+    <section class="pricing-cards-section">
+      <div class="pricing-cards-grid">
+
+        <!-- Free Plan -->
+        <div class="pricing-card" id="cardFree">
+          <div class="plan-badge-row">
+            <span class="plan-badge plan-badge-free">Free Forever</span>
+          </div>
+          <div class="plan-header">
+            <h2 class="plan-name">Ezia Essential</h2>
+            <div class="plan-price-block">
+              <span class="plan-price">₹0</span>
+              <span class="plan-price-period">/ month</span>
+            </div>
+            <p class="plan-tagline">Everything you need to build consistent healthy habits.</p>
+          </div>
+
+          <ul class="plan-features">
+            <li class="feature-item feature-included">
+              <span class="feature-icon">✓</span>
+              <span>Daily Overview Dashboard</span>
+            </li>
+            <li class="feature-item feature-included">
+              <span class="feature-icon">✓</span>
+              <span>Hydration Tracker</span>
+            </li>
+            <li class="feature-item feature-included">
+              <span class="feature-icon">✓</span>
+              <span>Sleep Tracker</span>
+            </li>
+            <li class="feature-item feature-included">
+              <span class="feature-icon">✓</span>
+              <span>Body Metrics Calculator (BMI, BMR, TDEE)</span>
+            </li>
+            <li class="feature-item feature-included">
+              <span class="feature-icon">✓</span>
+              <span>Weekly Trends &amp; History</span>
+            </li>
+            <li class="feature-item feature-included">
+              <span class="feature-icon">✓</span>
+              <span>Wellness Insights</span>
+            </li>
+            <li class="feature-item feature-included">
+              <span class="feature-icon">✓</span>
+              <span>Guest Mode (no sign-up needed)</span>
+            </li>
+            <li class="feature-item feature-excluded">
+              <span class="feature-icon feature-icon-no">✕</span>
+              <span>Personal AI Doctor</span>
+            </li>
+            <li class="feature-item feature-excluded">
+              <span class="feature-icon feature-icon-no">✕</span>
+              <span>AI Diet Planning</span>
+            </li>
+            <li class="feature-item feature-excluded">
+              <span class="feature-icon feature-icon-no">✕</span>
+              <span>Daily AI Motivation &amp; Coaching</span>
+            </li>
+          </ul>
+
+          <div class="plan-cta-area">
+            <a href="./register.html" class="btn btn-secondary btn-full btn-lg">Create Free Account</a>
+            <a href="./login.html?guest=true" class="plan-guest-link" id="guestModeLink">or Continue as Guest →</a>
+          </div>
+        </div>
+
+        <!-- Pro Plan -->
+        <div class="pricing-card pricing-card-pro" id="cardPro">
+          <div class="plan-badge-row">
+            <span class="plan-badge plan-badge-pro">⭐ Most Popular</span>
+          </div>
+          <div class="plan-header">
+            <h2 class="plan-name plan-name-pro">Ezia Pro</h2>
+            <div class="plan-price-block">
+              <span class="plan-price plan-price-pro">₹299</span>
+              <span class="plan-price-period">/ month</span>
+            </div>
+            <p class="plan-tagline">Your personal AI doctor — diet planner and daily motivator, always on your side.</p>
+          </div>
+
+          <ul class="plan-features">
+            <li class="feature-item feature-included">
+              <span class="feature-icon">✓</span>
+              <span>Everything in Ezia Essential</span>
+            </li>
+            <li class="feature-item feature-included feature-highlight">
+              <span class="feature-icon">✓</span>
+              <span><strong>Personal AI Doctor</strong> — your private health companion</span>
+            </li>
+            <li class="feature-item feature-included feature-highlight">
+              <span class="feature-icon">✓</span>
+              <span><strong>AI Diet Planner</strong> — personalised meal guidance</span>
+            </li>
+            <li class="feature-item feature-included feature-highlight">
+              <span class="feature-icon">✓</span>
+              <span><strong>Daily AI Motivation</strong> — habit coaching &amp; encouragement</span>
+            </li>
+            <li class="feature-item feature-included">
+              <span class="feature-icon">✓</span>
+              <span>Priority Wellness Insights</span>
+            </li>
+            <li class="feature-item feature-included">
+              <span class="feature-icon">✓</span>
+              <span>Goal-based custom plans</span>
+            </li>
+            <li class="feature-item feature-included">
+              <span class="feature-icon">✓</span>
+              <span>Early access to new features</span>
+            </li>
+          </ul>
+
+          <div class="plan-cta-area">
+            <button class="btn btn-primary btn-full btn-lg" id="proUpgradeBtn">Upgrade to Pro →</button>
+            <p class="plan-cta-note">Cancel anytime. No hidden charges.</p>
+          </div>
+
+          <!-- AI Doctor Preview Card -->
+          <div class="ai-doctor-preview">
+            <div class="ai-doctor-avatar">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+              </svg>
+            </div>
+            <div class="ai-doctor-bubble">
+              <span class="ai-doctor-name">Dr. Ezia AI</span>
+              <p class="ai-doctor-message">"Based on your sleep and hydration today, I'd suggest a light dinner with extra water before 8 PM. You're doing great — keep it up! 💚"</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Feature Comparison -->
+    <section class="comparison-section">
+      <div class="comparison-inner">
+        <h2 class="comparison-title">Why upgrade to Pro?</h2>
+        <div class="comparison-grid">
+          <div class="comparison-card">
+            <div class="comparison-icon">🥗</div>
+            <h3>AI Diet Planner</h3>
+            <p>Get a personalised daily meal plan built around your goals, body metrics, and preferences. No generic advice — just what works for you.</p>
+          </div>
+          <div class="comparison-card">
+            <div class="comparison-icon">💬</div>
+            <h3>Daily Motivation</h3>
+            <p>Your AI companion checks in every day with encouragement, habit nudges, and science-backed coaching to keep you consistent.</p>
+          </div>
+          <div class="comparison-card">
+            <div class="comparison-icon">🩺</div>
+            <h3>Personal AI Doctor</h3>
+            <p>Ask anything about your health, nutrition, or recovery. Your AI doctor reads your tracked data and responds with real, contextual guidance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+      <div class="faq-inner">
+        <h2 class="faq-title">Common questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary class="faq-question">Is the Free plan really free forever?</summary>
+            <p class="faq-answer">Yes. Ezia Essential is free with no time limits. You get access to the full tracking suite — hydration, sleep, body metrics, insights, and history — at no cost.</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">What is the Personal AI Doctor?</summary>
+            <p class="faq-answer">The AI Doctor is your private health companion. It reads your tracked wellness data — hydration, sleep, and body metrics — and provides personalised diet plans, daily motivation, and guidance. It is designed to feel like a knowledgeable friend, not a cold chatbot.</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Can I try Ezia without signing up?</summary>
+            <p class="faq-answer">Yes. Use Guest Mode on the login or landing page to explore the full Ezia Essential suite without creating an account. Your data is stored locally in your browser.</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Can I cancel my Pro subscription?</summary>
+            <p class="faq-answer">Yes. You can cancel anytime. There are no lock-in periods and no hidden charges. After cancellation you retain access to all free features.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="public-footer">
+    <div class="public-footer-inner">
+      <p>&copy; 2026 Ezia Personal Wellness Platform. Client-side private storage.</p>
+      <div class="footer-links">
+        <a href="./index.html">Home</a>
+        <a href="./login.html">Sign In</a>
+        <a href="./register.html">Register</a>
+        <a href="./dashboard.html">Dashboard</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Pro Upgrade Modal -->
+  <div id="proModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+      <div class="modal-icon">⭐</div>
+      <h2 class="modal-title" id="modalTitle">Ezia Pro — Coming Soon</h2>
+      <p class="modal-body">We're putting the finishing touches on your personal AI doctor. Enter your email and you'll be the first to know when Pro launches.</p>
+      <input type="email" class="form-input" id="proEmailInput" placeholder="name@example.com" autocomplete="email">
+      <button class="btn btn-primary btn-full" id="proNotifyBtn">Notify Me When Pro Launches →</button>
+      <p class="modal-disclaimer">No spam. Unsubscribe at any time.</p>
+    </div>
+  </div>
+
+</body>
+</html>

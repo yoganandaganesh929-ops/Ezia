@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Create your customized Ezia medical-wellness profile.">
+  <title>Begin Your Journey | Ezia Wellness</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./shared/tokens.css">
+  <link rel="stylesheet" href="./shared/base.css">
+  <link rel="stylesheet" href="./shared/components.css">
+  <link rel="stylesheet" href="./shared/layout.css">
+  <link rel="stylesheet" href="./register.css">
+
+  <script type="module" src="./dist/pages/auth.page.js"></script>
+</head>
+<body class="page-auth">
+
+  <!-- Public Header -->
+  <header class="public-header">
+    <div class="public-header-inner">
+      <a class="brand-link" href="./index.html">
+        <div class="brand-mark">
+          <img src="./assets/icons/ezia-logo.svg" alt="Ezia Logo" width="36" height="36">
+        </div>
+        <span class="brand-name">Ezia</span>
+      </a>
+
+      <nav class="public-nav">
+        <a href="./index.html">Home</a>
+        <a href="./login.html" class="btn btn-secondary btn-sm">Member Sign In</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Luxury Split Screen Registration Layout -->
+  <main class="auth-main">
+    <div class="auth-split-container">
+      
+      <!-- Left Side: Editorial Brand & Values Showcase -->
+      <div class="auth-editorial-panel">
+        <div class="editorial-panel-inner">
+          <div class="panel-brand-emblem">
+            <img src="./assets/icons/ezia-logo.svg" alt="Ezia 3D Symbol" width="56" height="56">
+          </div>
+          <span class="eyebrow" style="color: var(--color-mint);">BEGIN WITH INTENTION</span>
+          <h2 class="editorial-heading text-inverted">Calm clarity over chaotic data.</h2>
+          <p class="panel-quote-body">
+            &ldquo;Setting up your biological profile takes under thirty seconds. We calibrate your hydration targets, circadian resting goals, and metabolic estimates without cloud surveillance or commercial marketing.&rdquo;
+          </p>
+
+          <div class="panel-guarantees">
+            <div class="guarantee-row">
+              <span class="guarantee-check">✓</span>
+              <span>100% Private Client-Side Browser Storage</span>
+            </div>
+            <div class="guarantee-row">
+              <span class="guarantee-check">✓</span>
+              <span>Validated Mifflin-St Jeor Clinical BMR Formula</span>
+            </div>
+            <div class="guarantee-row">
+              <span class="guarantee-check">✓</span>
+              <span>Explicit Pediatric & Clinical Safety Safeguards</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side: Structured Profile Registration Form -->
+      <div class="auth-form-panel">
+        <div class="form-wrapper">
+          <div class="form-header-area">
+            <span class="badge badge-mint">Personalized Calibration</span>
+            <h1 class="form-main-title">Create your sanctuary</h1>
+            <p class="form-subtitle">Customize your baseline physical references and tracking preferences.</p>
+          </div>
+
+          <div id="registerStatus" class="status-message" role="alert" aria-live="polite"></div>
+
+          <form id="registerForm" novalidate>
+            <div class="form-group">
+              <label for="regName" class="form-label">Full Name</label>
+              <input 
+                type="text" 
+                id="regName" 
+                name="name" 
+                class="form-input" 
+                required 
+                placeholder="e.g. Maya Chen" 
+                autocomplete="name"
+              >
+              <span class="form-error" id="nameError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="regEmail" class="form-label">Email Address</label>
+              <input 
+                type="email" 
+                id="regEmail" 
+                name="email" 
+                class="form-input" 
+                required 
+                placeholder="maya.chen@example.com" 
+                autocomplete="email"
+              >
+              <span class="form-error" id="emailError"></span>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="regAge" class="form-label">Age (Years)</label>
+                <input 
+                  type="number" 
+                  id="regAge" 
+                  name="age" 
+                  class="form-input" 
+                  min="12" 
+                  max="120" 
+                  required 
+                  placeholder="e.g. 28"
+                >
+                <span class="form-error" id="ageError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="regGender" class="form-label">Biological Reference</label>
+                <select id="regGender" name="gender" class="form-select">
+                  <option value="female">Female</option>
+                  <option value="male">Male</option>
+                  <option value="prefer_not_say">Prefer not to say</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="regUnits" class="form-label">Measurement Preference</label>
+              <select id="regUnits" name="unitPreference" class="form-select">
+                <option value="metric">Metric (kg, cm, ml)</option>
+                <option value="imperial">Imperial (lbs, ft/in, oz)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="regPassword" class="form-label">Create Password</label>
+              <input 
+                type="password" 
+                id="regPassword" 
+                name="password" 
+                class="form-input" 
+                required 
+                placeholder="At least 8 characters" 
+                autocomplete="new-password"
+              >
+              <span class="form-error" id="passwordError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="termsCheck" class="form-checkbox-label">
+                <input type="checkbox" id="termsCheck" class="form-checkbox" required>
+                <span>I agree to the Terms of Service &amp; Private Health Data Policy</span>
+              </label>
+              <span class="form-error" id="termsError"></span>
+            </div>
+
+            <button type="submit" id="regSubmitBtn" class="btn btn-primary btn-full btn-lg">
+              <span>Create Profile &amp; Go to Dashboard &rarr;</span>
+            </button>
+          </form>
+
+          <div class="form-switch-prompt">
+            <span>Already have an account?</span>
+            <a href="./login.html" class="switch-link">Sign in here &rarr;</a>
+          </div>
+
+          <div class="guest-prompt-strip">
+            <span class="guest-prompt-text">Prefer to skip sign up?</span>
+            <a href="./dashboard.html" id="registerGuestBtn" class="btn btn-secondary btn-sm btn-guest-action">✦ Continue in Guest Mode &rarr;</a>
+          </div>
+
+          <div class="auth-disclaimer">
+            <p><strong>Privacy Architecture:</strong> Client-side biometric encryption with zero cloud profiling or third-party telemetry.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="public-footer">
+    <div class="public-footer-inner">
+      <p>&copy; 2026 Ezia Personal Wellness Platform. Client-side private storage.</p>
+      <div class="footer-links">
+        <a href="./index.html">Home</a>
+        <a href="./login.html">Sign In</a>
+        <a href="./calculator.html">Metrics</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

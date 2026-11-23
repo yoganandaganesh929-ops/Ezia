@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ezia 7-Day Habit History & Longitudinal Wellness Trends.">
+  <title>7-Day History &amp; Trends | Ezia Clinical Analytics</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./shared/tokens.css">
+  <link rel="stylesheet" href="./shared/base.css">
+  <link rel="stylesheet" href="./shared/components.css">
+  <link rel="stylesheet" href="./shared/layout.css">
+  <link rel="stylesheet" href="./history.css">
+
+  <script type="module" src="./dist/pages/history.page.js"></script>
+</head>
+<body class="page-history">
+
+  <!-- Mobile Header -->
+  <div class="mobile-header no-print">
+    <a class="brand-link" href="./dashboard.html">
+      <div class="brand-mark">
+        <img src="./assets/icons/ezia-logo.svg" alt="Ezia Logo" width="30" height="30">
+      </div>
+      <span class="brand-name" style="color: #fff;">Ezia</span>
+    </a>
+    <button type="button" id="mobileSidebarToggle" class="sidebar-toggle-btn" aria-label="Toggle navigation drawer">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+
+  <div class="sidebar-backdrop no-print"></div>
+
+  <div class="app-shell">
+    
+    <!-- Sidebar Navigation -->
+        <!-- Ezia Shared Sidebar Navigation -->
+    <aside class="sidebar" aria-label="Main Navigation">
+      <a class="sidebar-brand" href="./dashboard.html">
+        <div class="brand-mark">
+          <img src="./assets/icons/ezia-logo.svg" alt="Ezia Logo" width="36" height="36">
+        </div>
+        <div>
+          <span class="brand-name">Ezia</span>
+          <span class="brand-tag">WELLNESS</span>
+        </div>
+      </a>
+
+      <nav class="sidebar-nav">
+        <span class="sidebar-section-title">Wellness</span>
+        <a href="./dashboard.html" data-page="dashboard">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
+          <span>Dashboard</span>
+        </a>
+        <a href="./calculator.html" data-page="calculator">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="8.01" y2="10"/><line x1="12" y1="10" x2="12.01" y2="10"/><line x1="16" y1="10" x2="16.01" y2="10"/><line x1="8" y1="14" x2="8.01" y2="14"/><line x1="12" y1="14" x2="12.01" y2="14"/><line x1="16" y1="14" x2="16.01" y2="14"/><line x1="8" y1="18" x2="16" y2="18"/></svg>
+          <span>BMI &amp; Metabolism</span>
+        </a>
+        <a href="./hydration.html" data-page="hydration">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+          <span>Hydration</span>
+        </a>
+        <a href="./sleep.html" data-page="sleep">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <span>Sleep</span>
+        </a>
+
+        <span class="sidebar-section-title">Insights</span>
+        <a href="./insights.html" data-page="insights">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          <span>Insights</span>
+        </a>
+        <a href="./history.html" data-page="history" class="active" aria-current="page">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          <span>Weekly Trends</span>
+        </a>
+
+        <span class="sidebar-section-title">Plans</span>
+        <a href="./subscription.html" data-page="subscription">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <span>Upgrade to Pro</span>
+        </a>
+
+        <span class="sidebar-section-title">Settings</span>
+        <a href="./settings.html" data-page="settings">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          <span>Settings</span>
+        </a>
+      </nav>
+
+      <!-- Sidebar User Profile Footer -->
+      <div class="sidebar-footer">
+        <div class="sidebar-user-pill">
+          <div class="sidebar-avatar" id="sidebarAvatar">EZ</div>
+          <div class="sidebar-user-info" id="sidebarUserInfo">
+            <span id="sidebarUserName" class="sidebar-user-name">Member</span>
+            <span class="sidebar-user-status" id="sidebarUserStatus">Private Session</span>
+          </div>
+        </div>
+        <div class="sidebar-logout-wrap">
+          <a href="./login.html" id="sidebarLogout" class="sidebar-switch-link">Sign Out &rarr;</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Workspace -->
+    <main class="main-content">
+      
+      <!-- Page Header -->
+      <header class="page-header">
+        <div>
+          <span class="eyebrow">LONGITUDINAL CLINICAL PERSPECTIVE</span>
+          <h1 class="editorial-heading">7-Day Trends &amp; Habit History</h1>
+          <p class="page-description">
+            Unified view of your daily hydration intake, circadian sleep duration, and daily wellness rhythm stability.
+          </p>
+        </div>
+        
+        <div class="header-action-group no-print">
+          <button type="button" id="printReportBtn" class="btn btn-secondary btn-sm">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 6 2 18 2 18 9"></polyline>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+              <rect x="6" y="14" width="12" height="8"></rect>
+            </svg>
+            <span>Print Clinical Summary</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Charts Grid -->
+      <div class="history-charts-grid">
+        
+        <!-- Hydration Chart Card -->
+        <section class="card" aria-labelledby="hyd-chart-title">
+          <div class="card-header">
+            <div>
+              <span class="badge badge-teal">Daily Fluid Intake</span>
+              <h2 id="hyd-chart-title" class="card-title font-serif" style="margin-top: 4px;">Hydration Trends</h2>
+              <p class="card-description">Milliliters recorded vs. 2,500 ml target line</p>
+            </div>
+          </div>
+
+          <div id="historyHydrationChart" class="chart-box" role="img" aria-label="Seven day hydration bar chart">
+            <!-- Dynamic SVG chart -->
+          </div>
+          <p id="hydAccessibleSummary" class="sr-only"></p>
+        </section>
+
+        <!-- Sleep Chart Card -->
+        <section class="card" aria-labelledby="sleep-chart-title">
+          <div class="card-header">
+            <div>
+              <span class="badge badge-mint">Circadian Rest</span>
+              <h2 id="sleep-chart-title" class="card-title font-serif" style="margin-top: 4px;">Sleep Duration Trends</h2>
+              <p class="card-description">Recorded hours vs. 8.0 hr target line</p>
+            </div>
+          </div>
+
+          <div id="historySleepChart" class="chart-box" role="img" aria-label="Seven day sleep line chart">
+            <!-- Dynamic SVG chart -->
+          </div>
+          <p id="sleepAccessibleSummary" class="sr-only"></p>
+        </section>
+
+      </div>
+
+      <!-- Seven-Day Daily Summary Table -->
+      <section class="card table-card" aria-labelledby="history-table-title">
+        <div class="card-header">
+          <div>
+            <h2 id="history-table-title" class="card-title font-serif">Daily Longitudinal Ledger</h2>
+            <p class="card-description">Unified record of water volume, restorative sleep duration, and computed rhythm scores</p>
+          </div>
+          <span class="badge badge-teal">Verified Client Storage</span>
+        </div>
+
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Day</th>
+                <th>Hydration Volume</th>
+                <th>Goal %</th>
+                <th>Sleep Duration</th>
+                <th>Restfulness</th>
+                <th>Daily Score</th>
+              </tr>
+            </thead>
+            <tbody id="historyTableBody">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Longitudinal Analytics Summary -->
+      <div class="disclaimer-banner">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+        </svg>
+        <p>
+          <strong>Longitudinal Ledger Standards:</strong> Synthesizes verified client-side records across 7-day cyclical windows, tracking trends in volume intake, restorative sleep duration, and daily equilibrium consistency.
+        </p>
+      </div>
+
+    </main>
+  </div>
+
+</body>
+</html>

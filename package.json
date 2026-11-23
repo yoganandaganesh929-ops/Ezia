@@ -1,0 +1,14 @@
+{
+  "name": "ezia-wellness",
+  "version": "2.0.0",
+  "description": "Modern editorial digital wellness web application",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "test": "node dist/tests/test_suite_modern.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

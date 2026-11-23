@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ezia — Wix-inspired premium medical-wellness companion for daily rhythm, hydration, and restorative sleep.">
+  <title>Ezia — Editorial Health & Personal Wellness Rhythm</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./shared/tokens.css">
+  <link rel="stylesheet" href="./shared/base.css">
+  <link rel="stylesheet" href="./shared/components.css">
+  <link rel="stylesheet" href="./shared/layout.css">
+  <link rel="stylesheet" href="./index.css">
+
+  <script type="module" src="./dist/pages/landing.page.js"></script>
+</head>
+<body class="page-landing">
+
+  <!-- Top Wix-Inspired Editorial Navigation Header -->
+  <header class="public-header">
+    <div class="public-header-inner">
+      <a class="brand-link" href="./index.html" aria-label="Ezia Home">
+        <div class="brand-mark">
+          <img src="./assets/icons/ezia-logo.svg" alt="Ezia 3D Symbol" width="38" height="38">
+        </div>
+        <span class="brand-name">Ezia</span>
+        <span class="brand-tag">Wellness</span>
+      </a>
+
+      <nav class="public-nav" aria-label="Main Navigation">
+        <a href="./index.html" class="active" aria-current="page">Home</a>
+        <a href="#philosophy">Philosophy</a>
+        <a href="#features">Experience</a>
+        <a href="#clinical-ethics">Clinical Ethics</a>
+        <a href="./subscription.html" class="btn btn-ghost btn-sm">Plans</a>
+        <a href="./login.html" class="btn btn-secondary btn-sm">Member Sign In</a>
+        <a href="./dashboard.html" class="btn btn-primary btn-sm" id="navGuestBtn">Enter as Guest</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Experience -->
+  <main class="landing-main">
+
+    <!-- Hero Section: Editorial Typography + Warm Photography + 3D Preview -->
+    <section class="hero-editorial">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">PREMIUM DIGITAL HEALTHCARE & WELLNESS</span>
+          <h1 class="hero-headline">
+            Where medical precision meets <span class="hero-highlight">everyday vitality.</span>
+          </h1>
+          <p class="hero-narrative">
+            Ezia is a calm, evidence-based wellness sanctuary designed to bring clarity to your biological rhythm. Effortlessly balance hydration, restorative circadian sleep, and metabolic metrics without algorithmic anxiety.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="./dashboard.html" class="btn btn-primary btn-lg" id="heroGuestBtn">
+              <span>Enter as Guest &rarr;</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="./login.html" class="btn btn-secondary btn-lg">
+              <span>Member Sign In</span>
+            </a>
+          </div>
+
+          <div class="hero-trust-strip">
+            <div class="trust-item">
+              <span class="trust-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+              </span>
+              <div>
+                <strong>Client-Side &amp; Secure</strong>
+                <p>High-precision personal health suite</p>
+              </div>
+            </div>
+            <div class="trust-item">
+              <span class="trust-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="2"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </span>
+              <div>
+                <strong>Client-Side Privacy</strong>
+                <p>Zero third-party trackers or ad telemetry</p>
+              </div>
+            </div>
+            <div class="trust-item">
+              <span class="trust-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="2"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg>
+              </span>
+              <div>
+                <strong>Mifflin-St Jeor</strong>
+                <p>Validated physiological standard</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3D Interactive Live Hero Visual -->
+        <div class="hero-visual-frame">
+          <div class="hero-card-stack">
+            <!-- Editorial Brand Stage Underlay -->
+            <div class="photo-card-underlay editorial-brand-underlay">
+              <div class="brand-underlay-content">
+                <img src="./assets/icons/ezia-logo.svg" alt="Ezia Brand Symbol" width="64" height="64" class="underlay-logo">
+                <h3 class="underlay-title font-serif">Daily Rhythm Sanctuary</h3>
+                <p class="underlay-sub">Evidence-based biological equilibrium</p>
+              </div>
+              <div class="photo-caption-pill">
+                <span class="live-dot"></span> Private Session &middot; Morning Baseline
+              </div>
+            </div>
+
+            <!-- Floating 3D Wellness Preview Bento Card -->
+            <div class="bento-preview-card">
+              <div class="bento-card-top">
+                <div class="bento-header-info">
+                  <span class="badge badge-teal">Daily Rhythm Score</span>
+                  <span class="bento-date" id="heroLiveDate">Today &middot; Balanced</span>
+                </div>
+                <div class="bento-score-orb">
+                  <img src="./assets/illustrations/wellness-orb.svg" alt="3D Wellness Orb" width="64" height="64" class="spin-gentle">
+                </div>
+              </div>
+
+              <div class="bento-score-display">
+                <div class="score-number-wrap">
+                  <span class="score-number">88</span>
+                  <span class="score-total">/ 100</span>
+                </div>
+                <div class="score-sentiment">
+                  <strong>Optimal Equilibrium</strong>
+                  <p>Hydration on target &middot; 8h restorative rest</p>
+                </div>
+              </div>
+
+              <!-- Interactive Progress Visualizers -->
+              <div class="bento-meters">
+                <div class="meter-row">
+                  <div class="meter-info">
+                    <span class="meter-title">Hydration Fill</span>
+                    <span class="meter-val text-teal">2,250 / 2,500 ml</span>
+                  </div>
+                  <div class="meter-bar-track">
+                    <div class="meter-bar-fill fill-teal" style="width: 90%;"></div>
+                  </div>
+                </div>
+
+                <div class="meter-row">
+                  <div class="meter-info">
+                    <span class="meter-title">Circadian Sleep</span>
+                    <span class="meter-val text-mint">8.0 hrs &middot; Deep</span>
+                  </div>
+                  <div class="meter-bar-track">
+                    <div class="meter-bar-fill fill-mint" style="width: 100%;"></div>
+                  </div>
+                </div>
+
+                <div class="meter-row">
+                  <div class="meter-info">
+                    <span class="meter-title">Metabolic Resting Rate</span>
+                    <span class="meter-val text-amber">1,540 kcal / day</span>
+                  </div>
+                  <div class="meter-bar-track">
+                    <div class="meter-bar-fill fill-amber" style="width: 78%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bento-footer-action">
+                <a href="./dashboard.html" class="btn btn-mint btn-sm btn-full" id="heroPreviewCta">
+                  <span>Enter Your Dashboard</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Philosophy & Editorial Statement Section (Pilates & Medical Studio refined) -->
+    <section id="philosophy" class="philosophy-section">
+      <div class="container-narrow">
+        <div class="philosophy-card">
+          <div class="philosophy-content">
+            <span class="eyebrow">OUR CLINICAL & HUMAN PHILOSOPHY</span>
+            <h2 class="editorial-heading">Wellness is not an arbitrary metric. It is your daily physiological dialogue.</h2>
+            <p>
+              Most health platforms bombard you with aggressive gamification, unsolicited warnings, and unscientific formulas. Ezia replaces punitive noise with serene, transparent clarity. We believe in gentle consistency, dignified privacy, and medical honesty.
+            </p>
+            <div class="philosophy-quote">
+              &ldquo;When hydration, restorative sleep, and metabolic understanding converge, vitality becomes your natural state.&rdquo;
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The 4 Distinctive Pillars of Experience (Structured Bento Grid) -->
+    <section id="features" class="pillars-section">
+      <div class="container-wide">
+        <div class="section-title-wrap">
+          <span class="eyebrow">FOUR PILLARS OF DAILY BALANCE</span>
+          <h2 class="editorial-heading">Thoughtfully designed for everyday peace of mind</h2>
+          <p class="section-lead">Explore how each bespoke module helps you build long-term biological resilience.</p>
+        </div>
+
+        <div class="pillars-grid">
+          <!-- Pillar 1: Hydration -->
+          <div class="pillar-card">
+            <div class="pillar-visual-header bg-teal-subtle">
+              <img src="./assets/illustrations/hydration-water.svg" alt="3D Fluid Water Droplet" width="110" height="110" class="pillar-img">
+            </div>
+            <div class="pillar-body">
+              <span class="pillar-badge badge-teal">Pure Hydration</span>
+              <h3>Liquid Equilibrium</h3>
+              <p>Experience our interactive 3D fluid vessel. Log your intake with one-touch presets and observe your daily water balance fill in real-time.</p>
+              <ul class="pillar-list">
+                <li>Dynamic wave liquid animation</li>
+                <li>One-click quick adds (+250ml, +500ml)</li>
+                <li>Customized targets without rigid dogma</li>
+              </ul>
+              <a href="./hydration.html" class="pillar-cta">Open Hydration Vessel &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Pillar 2: Sleep Sanctuary -->
+          <div class="pillar-card">
+            <div class="pillar-visual-header bg-night-subtle">
+              <img src="./assets/illustrations/sleep-night.svg" alt="3D Luminous Crescent Moon" width="110" height="110" class="pillar-img">
+            </div>
+            <div class="pillar-body">
+              <span class="pillar-badge badge-navy">Circadian Sanctuary</span>
+              <h3>Restorative Night Sleep</h3>
+              <p>Step into an atmospheric twilight environment designed to prepare your mind for restful sleep. Features midnight-crossing calculations and sleep hygiene tracking.</p>
+              <ul class="pillar-list">
+                <li>Automatic cross-midnight duration math</li>
+                <li>Subjective 5-star restfulness rating</li>
+                <li>Curated evidence-based bedtime hygiene cues</li>
+              </ul>
+              <a href="./sleep.html" class="pillar-cta">Enter Sleep Sanctuary &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Pillar 3: Clinical Calculator -->
+          <div class="pillar-card">
+            <div class="pillar-visual-header bg-mint-subtle">
+              <img src="./assets/illustrations/bmi-gauge.svg" alt="3D Clinical Arc Gauge" width="110" height="110" class="pillar-img">
+            </div>
+            <div class="pillar-body">
+              <span class="pillar-badge badge-mint">Body Metrics</span>
+              <h3>BMR & Metabolic Arc</h3>
+              <p>Calculate your estimated Basal Metabolic Rate using the clinical Mifflin-St Jeor formula, paired with a clear 3D BMI needle gauge and pediatric safeguards.</p>
+              <ul class="pillar-list">
+                <li>Instant Metric (kg/cm) & Imperial (lbs/ft) switch</li>
+                <li>TDEE physical activity multipliers</li>
+                <li>Strict pediatric WHO clinical boundaries</li>
+              </ul>
+              <a href="./calculator.html" class="pillar-cta">Compute Metrics &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Pillar 4: Intelligence & Trends -->
+          <div class="pillar-card">
+            <div class="pillar-visual-header bg-sand-subtle">
+              <img src="./assets/illustrations/wellness-orb.svg" alt="3D Wellness Intelligence Orb" width="110" height="110" class="pillar-img">
+            </div>
+            <div class="pillar-body">
+              <span class="pillar-badge badge-amber">Health Intelligence</span>
+              <h3>7-Day Longitudinal Insights</h3>
+              <p>Observe your natural rhythms without cloud surveillance. Review SVG trend graphs and transparent clinical correlations with zero black-box scoring.</p>
+              <ul class="pillar-list">
+                <li>Clear "Triggered by" rationale on every insight</li>
+                <li>Dual-trend hydration & sleep graphs</li>
+                <li>One-click printable clinical summary</li>
+              </ul>
+              <a href="./insights.html" class="pillar-cta">Explore Insights &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Warm Photography Showcase Section (Wix Medical Company style) -->
+    <section class="imagery-editorial-section">
+      <div class="container-wide">
+        <div class="editorial-dual-grid">
+          <div class="editorial-image-frame">
+            <div class="editorial-artwork-canvas">
+              <img src="./assets/illustrations/wellness-orb.svg" alt="Ezia 3D Wellness Orb" class="editorial-vector-artwork" width="220" height="220">
+              <span class="artwork-glow-ring"></span>
+            </div>
+            <div class="editorial-stat-card">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Client-Side Privacy</span>
+              <p>Your health data never touches an external cloud database or advertiser profile.</p>
+            </div>
+          </div>
+
+          <div class="editorial-text-panel">
+            <span class="eyebrow">DESIGNED FOR HUMAN DIGNITY</span>
+            <h2 class="editorial-heading">A healthcare tool that respects your intelligence.</h2>
+            <p>
+              Traditional wellness apps monetize your vulnerabilities and incentivize chronic screen checking. Ezia was engineered from the ground up to demonstrate that medical aesthetics can be warm, calming, and deeply respectful of the human spirit.
+            </p>
+            <div class="check-features-list">
+              <div class="check-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Zero dark patterns, zero countdown timers, zero fear-based notifications</span>
+              </div>
+              <div class="check-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Transparent mathematical references available on every metric card</span>
+              </div>
+              <div class="check-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Export your logs as clean JSON or printable PDF anytime</span>
+              </div>
+            </div>
+
+            <div class="panel-action">
+              <a href="./register.html" class="btn btn-primary btn-lg">Begin Your Journey Today</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clinical Ethics & Safety Banner -->
+    <section id="clinical-ethics" class="ethics-section">
+      <div class="container-narrow">
+        <div class="disclaimer-banner">
+          <div class="disclaimer-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <div class="disclaimer-text">
+            <strong>Clinical Standards &amp; Privacy Architecture:</strong>
+            <p>
+              Ezia operates as a high-precision personal health and biological equilibrium suite. Calculations employ validated clinical benchmarks including the Mifflin-St Jeor equation and standard anthropometrics, executing 100% client-side with complete biometric data privacy.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Public Footer -->
+  <footer class="public-footer">
+    <div class="public-footer-inner">
+      <div class="footer-brand-col">
+        <a class="brand-link" href="./index.html">
+          <div class="brand-mark">
+            <img src="./assets/icons/ezia-logo.svg" alt="Ezia Logo" width="34" height="34">
+          </div>
+          <span class="brand-name">Ezia</span>
+        </a>
+        <p>A calm, evidence-based medical-wellness companion. Built exclusively with standards-compliant HTML5, CSS3, and browser-native JavaScript.</p>
+      </div>
+
+      <div class="footer-nav-grid">
+        <div class="footer-nav-col">
+          <h4>Experience</h4>
+          <ul>
+            <li><a href="./dashboard.html">Live Dashboard</a></li>
+            <li><a href="./hydration.html">Hydration Vessel</a></li>
+            <li><a href="./sleep.html">Sleep Sanctuary</a></li>
+            <li><a href="./calculator.html">Body Metrics</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Analytics</h4>
+          <ul>
+            <li><a href="./insights.html">Evidence Insights</a></li>
+            <li><a href="./history.html">7-Day Trends</a></li>
+            <li><a href="./settings.html">Target Settings</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Account</h4>
+          <ul>
+            <li><a href="./login.html">Member Sign In</a></li>
+            <li><a href="./register.html">Get Started Free</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Ezia HealthHub Project. All calculations performed client-side in your browser.</p>
+      <p>Inspired by Wix Health & Wellness Editorial Design.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
